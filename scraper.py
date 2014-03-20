@@ -5,7 +5,8 @@ import time
 import re
 
 # define the order our columns are displayed in the datastore
-scraperwiki.sqlite.save('data_columns', ['air_date','episode', 'category', 'dollar_value', 'text', 'answer','uid'])
+scraperwiki.sqlite.save(unique_keys=['uid'], data={'air_date','episode', 'category', 'dollar_value', 'text', 'answer','uid'})
+
 
 seasons_url = 'http://www.j-archive.com/listseasons.php'
 base_url = 'http://www.j-archive.com/'
